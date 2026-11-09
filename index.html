@@ -11,6 +11,8 @@
 /* TEMPORARY TEST: disable every animation, transition, zoom and transform */
 *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;transform:none!important;scale:1!important;zoom:1!important}
 .js .reveal{opacity:1!important;transform:none!important}
+/* Re-enable only the curiosity text cursor blink; all other motion stays disabled. */
+.type-cursor{animation:cursor-blink .8s steps(2,start) infinite!important}
 </style>
 </head>
 <body>
@@ -53,7 +55,6 @@
 </script>
 END TEMPORARY ANIMATION DISABLE -->
 
-<!-- TEMPORARILY DISABLED FOR ANIMATION ISOLATION
 <script>
 (() => {
   const word = document.getElementById('typed-word');
@@ -77,5 +78,4 @@ END TEMPORARY ANIMATION DISABLE -->
   window.setTimeout(tick, 2100);
 })();
 </script>
-END TEMPORARY ANIMATION DISABLE -->
 </body></html>
